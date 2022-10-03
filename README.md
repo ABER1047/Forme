@@ -19,11 +19,15 @@ At first, define below code and check the below functions
 
 -------------
 
+<div align="center">
+
 ![preview_1](imgs/img_distance.PNG)
 
 This function returns the length of a vector formed by the specified components [x1,y1] and [x2,y2]
 
 you can use this function when you want to get distance between two points
+
+</div>
 
 </br>
 
@@ -33,9 +37,13 @@ you can use this function when you want to get distance between two points
 
 -------------
 
+<div align="center">
+
 ![preview_1](imgs/img_angle.PNG)
 
 This function returns the direction of a vector formed by the specified components [x1,y1] and [x2,y2]
+
+</div>
 
 </br>
 
@@ -44,9 +52,13 @@ This function returns the direction of a vector formed by the specified componen
 
 -------------
 
+<div align="center">
+
 ![preview_1](imgs/img_place_meeting_point.PNG)
 
 This function returns "true" when a point met or be inside a circle
+
+</div>
 
 
 </br>
@@ -55,11 +67,13 @@ This function returns "true" when a point met or be inside a circle
 ### place_meeting_circle(x1,y1,x2,y2,rad1,rad2)
 
 -------------
+<div align="center">
 
 ![preview_1](imgs/img_place_meeting.PNG)
 
 This function returns "true" when two circles(collision mask) met
 
+</div>
 
 </br>
 
@@ -68,4 +82,8 @@ This function returns "true" when two circles(collision mask) met
 
 -------------
 
+<div align="center">
+
 You supply the low value for the range as well as the high value, and the function will return a random integer value within (and including) the given range. For example, irandom_range(10, 35) will return an integer between 10 and 35 inclusive.
+
+</div>
