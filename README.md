@@ -84,6 +84,8 @@ This function returns "true" when two circles(collision mask) met
 
 <div align="center">
 
-You supply the low value for the range as well as the high value, and the function will return a random integer value within (and including) the given range. For example, irandom_range(10, 35) will return an integer between 10 and 35 inclusive.
+You supply the low value for the range as well as the high value, and the function will return a random integer value within (and including) the given range
+
+For example, irandom_range(10, 35) will return an integer between 10 and 35 inclusive
 
 </div>
