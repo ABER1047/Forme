@@ -29,27 +29,33 @@ return Math.atan(rad);
 }
 
 //cosine
-function cos(rad)
+function acosh(rad)
 {
-return Math.cos(rad);
+return Math.acosh(rad);
 }
 
 //sine
-function sin(rad)
+function asin(rad)
 {
-return Math.sin(rad);
+return Math.asin(rad);
 }
 
 //tangent
-function tan(rad)
+function acos(rad)
 {
-return Math.tan(rad);
+return Math.acos(rad);
 }
 
 //sqrt
 function sqrt(value)
 {
 return Math.sqrt(value);
+}
+
+//sign
+function sign(value)
+{
+return Math.sign(value);
 }
 
 //round
