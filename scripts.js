@@ -94,6 +94,11 @@ function point_direction(x1,y1,x2,y2)
 return Math.atan2(y2 - y1, x2 - x1);
 }
 
+function irandom_return()
+{
+return Math.floor(Math.random()*-1 | 1);
+}
+
 //checking that these two circle met
 function place_meeting_circle(x1,y1,x2,y2,rad1,rad2)
 {
