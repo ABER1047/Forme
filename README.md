@@ -89,3 +89,18 @@ You supply the low value for the range as well as the high value, and the functi
 For example, irandom_range(10, 35) will return an integer between 10 and 35 inclusive
 
 </div>
+
+
+
+</br>
+
+
+### irandom_return()
+
+-------------
+
+<div align="center">
+
+You can get -1 or 1 value by 50% chance
+
+</div>
