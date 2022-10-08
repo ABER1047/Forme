@@ -97,9 +97,9 @@ return Math.atan2(y2 - y1, x2 - x1);
 //return -1 or 1
 function irandom_return()
 {
-var random_value = Math.floor(Math.random()*100 | 1);
+var random_value______ = Math.floor(Math.random()*100 | 1);
 
-    if (random_value <= 50)
+    if (random_value______ <= 50)
     {
     return 1;
     }
