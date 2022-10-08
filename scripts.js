@@ -94,6 +94,7 @@ function point_direction(x1,y1,x2,y2)
 return Math.atan2(y2 - y1, x2 - x1);
 }
 
+//return -1 or 1
 function irandom_return()
 {
 var random_value = Math.floor(Math.random()*100 | 1);
