@@ -91,7 +91,7 @@ return sqrt(power(x1 - x2,2) + power(y1 - y2,2));
 //get direction(angle) from point to point
 function point_direction(x1,y1,x2,y2)
 {
-return Math.atan((y1 - y2)/(x1 - x2));
+return Math.atan2(y2 - y1, x2 - x1);
 }
 
 //checking that these two circle met
