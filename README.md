@@ -1,5 +1,3 @@
-# Forme
-
 
 ## What is this?
 
