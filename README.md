@@ -3,7 +3,7 @@
 
 ## What is this?
 
-It is including some of **useful math functions** & it makes you can use **sin, cos, tan, abs, power, floor**... functions without **"Math."**
+It is including some of **useful functions** & it makes you can use **sin, cos, tan, abs, power, floor**... functions without **"Math."**
 
 -------------
 
