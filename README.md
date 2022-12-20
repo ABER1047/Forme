@@ -118,7 +118,7 @@ And then set the parameter "amount" to merge colors
   
 </div>
 
-### Example
+#### Example
 ```
 
 //it return "gray" color
@@ -142,7 +142,7 @@ You can limit the value of range of numbers
   
 </div>
   
-### Example
+#### Example
 ```
 
 var a = 10
@@ -186,7 +186,7 @@ it chooses the values from above parameters and returns it.
 </div>
   
   
-### Example
+#### Example
 ```
 
 //limit the value of range
