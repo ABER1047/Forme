@@ -254,3 +254,46 @@ function debug_log(value)
 {
 console.log(value);
 }
+
+
+//set_value_case(value,min,max,inner)
+function set_value_case(argument0,argument1,argument2,argument3)
+{
+var return_value__ = argument0;
+
+	if (argument3 == true) //inner
+	{
+		if (argument0 < argument1)
+		{
+		return_value__ = argument1;
+		}
+		
+		if (argument0 > argument2)
+		{
+		return_value__ = argument2;
+		}
+	}
+	else
+	{
+		if (argument0 > argument1 && argument0 < argument2)
+		{
+		return_value__ = argument0;
+		}
+	}
+return return_value__;
+}
+
+
+//preload imgs
+function preload_images(file_directory, type, image_name1/*, image_name...*/)
+{
+    for(var _i_ = 2; _i_ <= arguments.length; _i_++)
+    {
+    var __preloaded_imgs__ = document.createElement("img");
+    __preloaded_imgs__.src = file_directory+"/"+arguments[_i_]+"."+type;
+    __preloaded_imgs__.style.width = "0px";
+    $("input").after(__preloaded_imgs__[_i_]);
+    }
+
+return true;
+}
