@@ -232,3 +232,34 @@ returns = set_value_case(value, 100, 200, true);
 console.log(returns);
   
 ```
+
+
+
+</br></br></br>
+  
+### preload_images(file_directory, type, image_name1, image_name2, image_name...)
+
+-------------
+
+<div align="center">
+
+it makes the images preloaded.
+
+it is useful when you added new images after page loaded or change the already existed image to other one.
+
+(if you didn't preload the images before this situations, the images are not shown until fully loaded)
+
+
+</div>
+  
+  
+#### Example
+```
+
+//it loads the images file "MY_GIF1.gif", "MY_GIF2.gif", "MY_GIF3.gif"
+preload_images("my_pc/image_folder", "gif", "MY_GIF1", "MY_GIF2", "MY_GIF3");
+
+//it loads the images file "MY_IMG1.png", "MY_IMG2.png", "MY_IMG3.png"
+preload_images("my_pc/image_folder", "png", "MY_IMG1", "MY_IMG2", "MY_IMG3");
+  
+```
