@@ -244,7 +244,9 @@ console.log(returns);
 <div align="center">
 
 it makes the images preloaded.
+
 it is useful when you added new images after page loaded or change the already existed image to other one.
+
 (if you didn't preload the images before this situations, the images are not shown until fully loaded)
 
 
