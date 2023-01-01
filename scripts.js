@@ -292,8 +292,18 @@ function preload_images(file_directory, type, image_name1/*, image_name...*/)
     var __preloaded_imgs__ = document.createElement("img");
     __preloaded_imgs__.src = file_directory+"/"+arguments[_i_]+"."+type;
     __preloaded_imgs__.style.width = "0px";
-    $("input").after(__preloaded_imgs__[_i_]);
+    __preloaded_imgs__.style.position = "fixed";
+    __preloaded_imgs__.style.top = "0px";
+    __preloaded_imgs__.style.left = "0px";
+    $("input").after(__preloaded_imgs__);
+    
+    setTimeout(del_preloaded_imgs_ele,10000,__preloaded_imgs__);
     }
 
 return true;
+}
+
+function del_preloaded_imgs_ele(__target_img__)
+{
+__target_img__.remove();
 }
