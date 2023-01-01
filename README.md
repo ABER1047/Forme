@@ -196,3 +196,39 @@ var a = choose("A","B","C",1,2,3);
 console.log(a);
   
 ```
+
+
+</br></br></br>
+  
+### set_value_case(value, min, max, inner)
+
+-------------
+
+<div align="center">
+
+it returns another specific value by dividing the case where the value is within the range of the condition and the case where it is not.
+  
+</div>
+  
+  
+#### Example
+```
+
+//setting
+var value = 50;
+var returns = 0;
+
+
+
+returns = set_value_case(value, 0, 100, true);
+
+//it returns 50 because the value "50" is between 0~100
+console.log(returns);
+
+
+returns = set_value_case(value, 100, 200, true);
+
+//it returns 100 because the value "50" is smaller than "min" value [100]
+console.log(returns);
+  
+```
