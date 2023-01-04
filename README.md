@@ -263,3 +263,165 @@ preload_images("my_pc/image_folder", "gif", "MY_GIF1", "MY_GIF2", "MY_GIF3");
 preload_images("my_pc/image_folder", "png", "MY_IMG1", "MY_IMG2", "MY_IMG3");
   
 ```
+
+
+
+
+</br></br></br>
+  
+### get_remaining_time(audio)
+
+-------------
+
+<div align="center">
+
+you can get remaining audio/video time.
+
+
+</div>
+  
+  
+#### Example
+```
+var audio = document.getElementById("id_audio");
+
+//it returns remaining time (seconds)
+console.log(get_remaining_time(audio));
+  
+```
+
+
+
+
+
+
+
+
+</br></br></br>
+  
+### get_current_time(audio)
+
+-------------
+
+<div align="center">
+
+you can get current audio/video time
+
+
+</div>
+  
+  
+#### Example
+```
+var audio = document.getElementById("id_audio");
+
+//it returns current time (seconds)
+console.log(get_current_time(audio));
+  
+```
+
+
+
+
+
+</br></br></br>
+  
+### reconstruction_time_sec(seconds)
+
+-------------
+
+<div align="center">
+
+It converts seconds to clock time
+
+
+</div>
+  
+  
+#### Example
+```
+
+//it returns current clock time (1:00:00)
+console.log(reconstruction_time_sec(3600)); //1 hour
+  
+```
+
+
+
+
+
+
+</br></br></br>
+  
+### convert_min_to_sec(minutes)
+
+-------------
+
+<div align="center">
+
+It converts minutes to seconds and returns it
+
+</div>
+
+
+#### Example
+```
+
+//it returns "60"
+console.log(convert_min_to_sec(1)); //1 minute
+  
+```
+  
+  
+  
+  
+  
+  
+
+</br></br></br>
+  
+### convert_hour_to_min(hours)
+
+-------------
+
+<div align="center">
+
+It converts hours to minutes and returns it
+
+</div>
+
+
+#### Example
+```
+
+//it returns "60"
+console.log(convert_hour_to_min(1)); //1 hour
+  
+```
+  
+  
+  
+  
+  
+  
+</br></br></br>
+  
+### convert_hour_to_sec(hours)
+
+-------------
+
+<div align="center">
+
+It converts hours to seconds and returns it
+
+</div>
+
+
+#### Example
+```
+
+//it returns "3600"
+console.log(convert_hour_to_sec(1)); //1 hour
+  
+```
+  
