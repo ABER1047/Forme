@@ -244,7 +244,7 @@ console.log(returns);
 
 
 <details>
-<summary>Design</summary>
+<summary>Colors/Alpha</summary>
 
 
 
