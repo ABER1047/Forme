@@ -94,7 +94,7 @@ This function returns "true" when two circles(collision mask) met
 
 
 <details>
-<summary>Random values and Corrected values</summary>
+<summary>Random values/Corrected values</summary>
 
 
 ### irandom_range(range_1,range_2)
