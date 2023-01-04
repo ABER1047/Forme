@@ -13,6 +13,13 @@ At first, define below code and check the below functions
 <script src = "https://cdn.jsdelivr.net/gh/ABER1047/Forme@main/scripts.js"></script>
 ```
 
+</br>
+
+
+<details>
+<summary>Angles/Distance</summary>
+
+
 ### point_distance(x1,y1,x2,y2)
 
 -------------
@@ -75,6 +82,20 @@ This function returns "true" when two circles(collision mask) met
 
 </br>
 
+</details>
+
+
+
+
+
+
+
+
+
+
+<details>
+<summary>Random values and Corrected values</summary>
+
 
 ### irandom_range(range_1,range_2)
 
@@ -102,32 +123,7 @@ For example, irandom_range(10, 35) will return an integer between 10 and 35 incl
 You can get -1 or 1 value by 50% chance
   
 </div>
-  
 
-</br></br></br>
-  
-### merge_color(color1, color2, amount, debug_mode)
-
--------------
-
-<div align="center">
-
-you need to set the parameter "color1" and "color2" (hex color only)
-And then set the parameter "amount" to merge colors
-(0 is minimum and 1 is maximum. if amount value is less than 0 or over than 1, it is applied 0 and 1 if amount is 0, you can get only "color1" value, and if amount is 1, you can get only "color2" value)
-  
-</div>
-
-#### Example
-```
-
-//it return "gray" color
-merge_color("#ffffff", "#2a2a28", 0.5);
-
-//if you want to see the result on console, use the parameter "debug mode"
-merge_color("#ffffff", "#2a2a28", 0.5, 1);
-
-```
 
 
 </br>
@@ -198,6 +194,9 @@ console.log(a);
 ```
 
 
+
+
+
 </br></br></br>
   
 ### set_value_case(value, min, max, inner)
@@ -234,9 +233,58 @@ console.log(returns);
 ```
 
 
+</details>
 
-</br></br></br>
+
+
+
+
+
+
+
+
+<details>
+<summary>Design</summary>
+
+
+
+### merge_color(color1, color2, amount, debug_mode)
+
+-------------
+
+<div align="center">
+
+you need to set the parameter "color1" and "color2" (hex color only)
+And then set the parameter "amount" to merge colors
+(0 is minimum and 1 is maximum. if amount value is less than 0 or over than 1, it is applied 0 and 1 if amount is 0, you can get only "color1" value, and if amount is 1, you can get only "color2" value)
   
+</div>
+
+#### Example
+```
+
+//it return "gray" color
+merge_color("#ffffff", "#2a2a28", 0.5);
+
+//if you want to see the result on console, use the parameter "debug mode"
+merge_color("#ffffff", "#2a2a28", 0.5, 1);
+
+```
+
+
+</details>
+
+
+
+
+
+
+
+<details>
+<summary>Loading</summary>
+
+
+
 ### preload_images(file_directory, type, image_name1, image_name2, image_name...)
 
 -------------
@@ -265,9 +313,18 @@ preload_images("my_pc/image_folder", "png", "MY_IMG1", "MY_IMG2", "MY_IMG3");
 ```
 
 
+</details>
 
 
-</br></br></br>
+
+
+
+
+
+<details>
+<summary>Time/Duration</summary>
+
+
   
 ### get_remaining_time(audio)
 
@@ -425,3 +482,6 @@ console.log(convert_hour_to_sec(1)); //1 hour
   
 ```
   
+
+
+</details>
