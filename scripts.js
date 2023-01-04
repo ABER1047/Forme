@@ -76,25 +76,46 @@ function power(base,exponent)
 return Math.pow(base,exponent);
 }
 
-//random value (whole number only)
+
+/**You supply the low value for the range as well as the high value, and the function will return a random integer value within (and including) the given range
+@param range_1
+@param range_2
+@returns a random integer value within (and including) the given range
+**/
 function irandom_range(range_1,range_2)
 {
 return Math.floor(Math.random()*range_2 | range_1);
 }
 
-//get distance from point to point
+/**You can get distance from point to point
+@param x1
+@param y1
+@param x2
+@param y2
+@returns distance value
+**/
 function point_distance(x1,y1,x2,y2)
 {
 return sqrt(power(x1 - x2,2) + power(y1 - y2,2));
 }
 
-//get direction(angle) from point to point
+
+/**You can get direction(angle) from point to point
+@param x1
+@param y1
+@param x2
+@param y2
+@returns direction(angle)
+**/
 function point_direction(x1,y1,x2,y2)
 {
 return Math.atan2(y2 - y1, x2 - x1);
 }
 
-//return -1 or 1
+
+/**You can get -1 or 1 value by 50% chance
+@returns return -1 or 1 randomly
+**/
 function irandom_return()
 {
 var random_value______ = Math.floor(Math.random()*100 | 1);
@@ -109,7 +130,14 @@ var random_value______ = Math.floor(Math.random()*100 | 1);
     }
 }
 
-//return choosed values randomly
+
+/**it chooses the values from above parameters and returns it
+@param val0
+@param val1
+@param val...
+@param max_val
+@returns return choosed values randomly
+**/
 function choose(val0, /*val1, val2, …, max_val*/)
 {
 var random_choosed__ = irandom_range(0,arguments.length);
@@ -117,7 +145,15 @@ var random_choosed__ = irandom_range(0,arguments.length);
 return arguments[random_choosed__];
 }
 
-//checking that these two circle met
+/**checking that these two circle met
+@param x1
+@param y1
+@param x2
+@param y2
+@param rad1
+@param rad2
+@returns This function returns "true" when two circles(collision mask) met
+**/
 function place_meeting_circle(x1,y1,x2,y2,rad1,rad2)
 {
     if (sqrt(power(x1 - x2,2) + power(y1 - y2,2)) <= rad1+rad2)
@@ -130,7 +166,14 @@ function place_meeting_circle(x1,y1,x2,y2,rad1,rad2)
     }
 }
 
-//checking that a point met a cirle
+/**checking that a point met a cirle
+@param x1
+@param y1
+@param x2
+@param y2
+@param rad
+@returns This function returns "true" when a point met or be inside a circle
+**/
 function place_meeting_point(x1,y1,x2,y2,rad)
 {
     if (sqrt(power(x1 - x2,2) + power(y1 - y2,2)) <= rad)
@@ -143,7 +186,12 @@ function place_meeting_point(x1,y1,x2,y2,rad)
     }
 }
 
-//sign without_zero
+
+
+/**sign without_zero
+@param value
+@returns corrected value
+**/
 function sign_without(value)
 {
 var _____var = Math.sign(value);
@@ -155,7 +203,14 @@ var _____var = Math.sign(value);
 return Math.sign(value);
 }
 
-//correct value
+
+
+/**You can limit the value of range of numbers
+@param value
+@param min
+@param max
+@returns corrected value
+**/
 function correct_value(value,min,max)
 {
 var corrected_value__ = value;
@@ -172,7 +227,13 @@ return corrected_value__;
 }
 
 
-//merge color
+/**merge color
+@param color1
+@param color2
+@param amount
+@param debug_mode (Empty allowed)
+@returns merged color value
+**/
 function merge_color(color_value1, color_value2, amount/*, debug_mode*/)
 {
 debug_mode = debug_mode || 0;
@@ -249,14 +310,29 @@ var hex = Math.round(num).toString(16);
 return hex;
 }
 
-//= console.log()
+
+
+
+
+/**same as console.log function 
+@param value
+@returns true
+**/
 function debug_log(value)
 {
 console.log(value);
+return true;
 }
 
 
-//set_value_case(value,min,max,inner)
+
+/**set_value_case(value,min,max,inner)
+@param value
+@param min
+@param max
+@param inner (true or false)
+@returns specific value by dividing the case where the value is within the range of the condition and the case where it is not
+**/
 function set_value_case(argument0,argument1,argument2,argument3)
 {
 var return_value__ = argument0;
@@ -284,7 +360,14 @@ return return_value__;
 }
 
 
-//preload imgs
+
+/**preload images
+@param file_directory
+@param type file type (png, gif, jpg...)
+@param image_name1
+@param image_name...
+@returns true
+**/
 function preload_images(file_directory, type, image_name1/*, image_name...*/)
 {
     for(var _i_ = 2; _i_ <= arguments.length; _i_++)
@@ -306,4 +389,90 @@ return true;
 function del_preloaded_imgs_ele(__target_img__)
 {
 __target_img__.remove();
+}
+
+/**get remaining audio/video time
+@param audio
+@returns remaining time
+**/
+function get_remaining_time(audio)
+{
+var duration = parseInt(audio.duration),
+currentTime = parseInt(audio.currentTime);
+return (duration - currentTime);
+}
+
+
+/**get current audio/video time
+@param audio
+@returns current time
+**/
+function get_current_time(audio)
+{
+return parseInt(audio.currentTime);
+}
+
+
+/**converts seconds to clock time
+@param seconds
+@returns clock time
+**/
+function reconstruction_time_sec(seconds)
+{
+var cal_min = Math.floor(seconds/60);
+var cal_h = Math.floor(seconds/3600);
+var total_mes = "";
+    if (cal_h != 0)
+    {
+    total_mes = cal_h+":";
+    }
+    
+    if (cal_min >= 10)
+    {
+    total_mes = total_mes+cal_min+":";
+    }
+    else
+    {
+    total_mes = total_mes+"0"+cal_min+":";
+    }
+    
+    if (seconds >= 10)
+    {
+    total_mes = total_mes+seconds;
+    }
+    else
+    {
+    total_mes = total_mes+"0"+seconds;
+    }
+
+return total_mes;
+}
+
+
+/**converts minutes to seconds
+@param minutes
+@returns seconds
+**/
+function convert_min_to_sec(minutes)
+{
+return minutes*60;
+}
+
+/**converts hours to minutes
+@param hours
+@returns minutes
+**/
+function convert_hour_to_min(hours)
+{
+return hours*60;
+}
+
+
+/**converts hours to seconds
+@param hours
+@returns seconds
+**/
+function convert_hour_to_sec(hours)
+{
+return hours*3600;
 }
