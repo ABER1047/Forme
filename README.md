@@ -383,7 +383,7 @@ console.log(get_current_time(audio));
 
 </br></br></br>
   
-### reconstruction_time_sec(seconds)
+### convert_sec_to_clocktime(seconds)
 
 -------------
 
