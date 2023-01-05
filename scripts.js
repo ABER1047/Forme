@@ -1,79 +1,226 @@
-//absolute value
-function abs(value)
+
+
+/**convert degree to radian
+@param deg
+@returns rad
+**/
+function rad(deg)
 {
-return Math.abs(value);
+return (Math.PI/180)*deg;
 }
 
-//cosine
+
+/**convert radian to degree
+@param rad
+@returns deg
+**/
+function deg(rad)
+{
+return (180/Math.PI)*deg;
+}
+
+
+/**return pi(π)
+@returns pi(π)
+**/
+function pi()
+{
+return Math.PI;
+}
+
+
+
+
+
+
+/**cosine
+@param rad
+@returns cos value
+**/
 function cos(rad)
 {
 return Math.cos(rad);
 }
 
-//sine
-function sin(rad)
-{
-return Math.sin(rad);
-}
-
-//tangent
-function tan(rad)
-{
-return Math.tan(rad);
-}
-
-//tangent
-function atan(rad)
-{
-return Math.atan(rad);
-}
-
-//cosine
+/**arccosineh
+@param rad
+@returns arccosineh value
+**/
 function acosh(rad)
 {
 return Math.acosh(rad);
 }
 
-//sine
-function asin(rad)
-{
-return Math.asin(rad);
-}
-
-//tangent
+/**arccosine
+@param rad
+@returns arccosine value
+**/
 function acos(rad)
 {
 return Math.acos(rad);
 }
 
-//sqrt
+/**arccosine
+@param rad
+@returns arccosine value
+**/
+function arccos(rad)
+{
+return Math.acos(rad);
+}
+
+
+
+
+/**sine
+@param rad
+@returns sine value
+**/
+function sin(rad)
+{
+return Math.sin(rad);
+}
+
+/**arcsine
+@param rad
+@returns arcsine value
+**/
+function asin(rad)
+{
+return Math.asin(rad);
+}
+
+/**arcsine
+@param rad
+@returns arcsine value
+**/
+function arcsin(rad)
+{
+return Math.asin(rad);
+}
+
+/**arcsineh
+@param rad
+@returns arcsineh value
+**/
+function asinh(rad)
+{
+return Math.asinh(rad);
+}
+
+
+
+
+/**tangent
+@param rad
+@returns tangent value
+**/
+function tan(rad)
+{
+return Math.tan(rad);
+}
+
+/**arctangenth
+@param rad
+@returns arctangenth value
+**/
+function atanh(rad)
+{
+return Math.atanh(rad);
+}
+
+/**arctangent2
+@param rad
+@returns arctangent2 value
+**/
+function atan2(rad)
+{
+return Math.atan2(rad);
+}
+
+/**arctangent
+@param rad
+@returns arctangent value
+**/
+function atan(rad)
+{
+return Math.atan(rad);
+}
+
+/**arctangent
+@param rad
+@returns arctangent value
+**/
+function arctan(rad)
+{
+return Math.atan(rad);
+}
+
+
+
+
+
+/**square root
+@param value
+@returns square root value
+**/
 function sqrt(value)
 {
 return Math.sqrt(value);
 }
 
-//sign
+/**sign
+@param value
+@returns sign value
+**/
 function sign(value)
 {
 return Math.sign(value);
 }
 
-//round
+/**round
+@param value
+@returns round value
+**/
 function round(value)
 {
 return Math.round(value)
 }
 
-//floor
+/**floor
+@param value
+@returns floor value
+**/
 function floor(value)
 {
 return Math.floor(value);
 }
 
-//power
+/**power
+@param value
+@returns power value
+**/
 function power(base,exponent)
 {
 return Math.pow(base,exponent);
+}
+
+/**power
+@param value
+@returns power value
+**/
+function pow(base,exponent)
+{
+return Math.pow(base,exponent);
+}
+
+/**absolute value
+@param value
+@returns absolute value
+**/
+function abs(value)
+{
+return Math.abs(value);
 }
 
 
@@ -417,7 +564,7 @@ return parseInt(audio.currentTime);
 @param seconds
 @returns clock time
 **/
-function reconstruction_time_sec(seconds)
+function convert_sec_to_clocktime(seconds)
 {
 var cal_min = Math.floor(seconds/60);
 var cal_h = Math.floor(seconds/3600);
@@ -476,3 +623,60 @@ function convert_hour_to_sec(hours)
 {
 return hours*3600;
 }
+
+
+
+
+/**You can get the directory of file
+@param input
+@returns directory
+**/
+function get_file_directory(input)
+{
+    for(var i = 0; i < input.originalEvent.srcElement.files.length; i++) 
+    {
+    var file = input.originalEvent.srcElement.files[i];
+    }
+    
+var reader = new FileReader();
+reader.readAsDataURL(file);
+    reader.onloadend = function() 
+    {
+    return reader.result;
+    }
+console.log("file"+reader.result);
+}
+
+
+
+/**This function returns the direction of a vector formed by the specified components [x1,y1], [x2,y2], [x3,y3]
+@param x1
+@param y1
+@param x2
+@param y2
+@param x3
+@param y3
+@returns rad
+**/
+function point_direction2(x1,y1,x2,y2,x3,y3)
+{
+var _c_ = Math.pow(x2-x1,2)+Math.pow(y2-y1,2);
+var _a_ = Math.pow(x3-x1,2)+Math.pow(y3-y1,2);
+var _b_ = Math.pow(x3-x2,2)+Math.pow(y2-y3,2);
+_cosA_value_ = (_b_+_c_-_a_)/(2*Math.sqrt(_b_)*Math.sqrt(_c_));
+return Math.acos(_cosA_value_);
+}
+
+
+
+
+
+
+
+function test()
+{
+debug_log(point_direction2(0,0,1,1,0,1));
+}
+
+
+test();
