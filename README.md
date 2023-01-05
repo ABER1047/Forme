@@ -1,3 +1,9 @@
+<div align="center">
+
+<img src = "imgs/repo_templ.png" width = "900px">
+
+</div>
+
 
 ## What is this?
 
