@@ -16,8 +16,114 @@ At first, define below code and check the below functions
 </br>
 
 
+
+
+
+
+
+
+
 <details>
-<summary>Angles/Distance</summary>
+<summary>Angles</summary>
+
+
+### point_direction(x1,y1,x2,y2)
+
+-------------
+
+<div align="center">
+
+<img width="450px" src = imgs/img_angle.PNG />
+
+This function returns the direction of a vector formed by the specified components [x1,y1] and [x2,y2]
+
+</div>
+
+</br>
+
+
+### point_direction2(x1,y1,x2,y2,x3,y3)
+
+-------------
+
+<div align="center">
+
+<img width="450px" src = imgs/angle_3.PNG />
+
+This function returns the direction(radian) of a vector formed by the specified components [x1,y1], [x2,y2], [x3,y3]
+
+</div>
+
+</br>
+
+
+### rad(deg)
+
+-------------
+
+<div align="center">
+
+It converts degree to radian
+
+</div>
+
+</br>
+
+
+### deg(rad)
+
+-------------
+
+<div align="center">
+
+It converts radian to degree
+
+</div>
+
+</br>
+
+
+### Etc.
+
+
+<div align="center">
+
+pi()
+
+sin(rad) / asin(rad) / arcsin(rad) / asinh(rad)
+
+cos(rad) / acos(rad) / arccos(rad) / acosh(rad)
+
+tan(rad) / atan(rad) / arctan(rad) / atanh(rad) / atan2(rad)
+
+
+
+-------------
+
+
+functions which can be used without "Math."
+
+It is more convenient to use with deg(rad) function or rad(deg) functions.
+
+</div>
+
+</br>
+
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+<details>
+<summary>Distance</summary>
 
 
 ### point_distance(x1,y1,x2,y2)
@@ -36,21 +142,6 @@ you can use this function when you want to get distance between two points
 
 </br>
 
-
-
-### point_direction(x1,y1,x2,y2)
-
--------------
-
-<div align="center">
-
-<img width="450px" src = imgs/img_angle.PNG />
-
-This function returns the direction of a vector formed by the specified components [x1,y1] and [x2,y2]
-
-</div>
-
-</br>
 
 
 ### place_meeting_point(x1,y1,x2,y2,rad)
@@ -94,7 +185,7 @@ This function returns "true" when two circles(collision mask) met
 
 
 <details>
-<summary>Random values/Corrected values</summary>
+<summary>Numbers/Values</summary>
 
 
 ### irandom_range(range_1,range_2)
@@ -231,6 +322,28 @@ returns = set_value_case(value, 100, 200, true);
 console.log(returns);
   
 ```
+
+
+
+### Etc.
+
+
+<div align="center">
+
+sign(rad) / abs(rad) / sqrt(rad) / pow(rad) / power(rad)
+
+round(rad) / floor(rad)
+
+-------------
+
+
+functions which can be used without "Math."
+
+</div>
+
+</br>
+
+
 
 
 </details>
