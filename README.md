@@ -123,7 +123,7 @@ It is more convenient to use with deg(rad) function or rad(deg) functions.
 
 
 <details>
-<summary>Distance/Placing</summary>
+<summary>Distance/Collision</summary>
 
 
 ### point_distance(x1,y1,x2,y2)
