@@ -675,7 +675,15 @@ return Math.acos(_cosA_value_);
 
 function test()
 {
-debug_log(point_direction2(0,0,1,1,0,1));
+var na = 7;
+    if (na%4)
+    {
+    debug_log("true");
+    }
+    else
+    {
+    debug_log("false");
+    }
 }
 
 
