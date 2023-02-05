@@ -669,21 +669,65 @@ return Math.acos(_cosA_value_);
 
 
 
+/**Permutation
+@param n
+@param r
+@returns Permutation value
+**/
+function permutation(x1,x2)
+{
+var return_value__ = x1;
+    for(var _i_ = 1; _i_ < x2; _i_++)
+    {
+    return_value__ *= x1-_i_;
+    }
+
+return return_value__;
+}
+
+
+
+
+/**Combination
+@param n
+@param r
+@returns Combination value
+**/
+function combination(x1,x2)
+{
+    //optimizing
+    if (x1*0.5 < x2)
+    {
+    x2 = x1-x2;
+    }
+return permutation(x1,2)/permutation(x2,2);
+}
+
+
+
+
+/**factorial
+@param n
+@returns factorial value
+**/
+function factorial(n)
+{
+var return_value__ = n;
+    for(var i = n-1; i > 1; i--)
+    {
+    return_value__ *= i
+    }
+return return_value__;
+}
+
 
 
 
 
 function test()
 {
-var na = 7;
-    if (na%4)
-    {
-    debug_log("true");
-    }
-    else
-    {
-    debug_log("false");
-    }
+debug_log(factorial(4));
+debug_log(permutation(6,3));
 }
 
 
