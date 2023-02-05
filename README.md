@@ -191,7 +191,7 @@ This function returns "true" when two circles(collision mask) met
 
 
 <details>
-<summary>Numbers/Values</summary>
+<summary>Numerical/Random</summary>
 
 
 ### irandom_range(range_1,range_2)
@@ -290,6 +290,61 @@ console.log(a);
   
 ```
 
+
+
+</br></br></br>
+  
+### factorial(n)
+
+-------------
+
+<div align="center">
+
+it returns mathematical factorial value
+  
+</div>
+  
+  
+```
+
+
+
+
+</br></br></br>
+  
+### permutation(n,r)
+
+-------------
+
+<div align="center">
+
+it returns mathematical permutation value
+  
+</div>
+  
+  
+```
+
+
+
+
+
+
+
+</br></br></br>
+  
+### combination(n,r)
+
+-------------
+
+<div align="center">
+
+it returns mathematical combination value
+  
+</div>
+  
+  
+```
 
 
 
