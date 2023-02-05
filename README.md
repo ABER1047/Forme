@@ -305,7 +305,7 @@ it returns mathematical factorial value
 </div>
   
   
-```
+
 
 
 
@@ -323,7 +323,7 @@ it returns mathematical permutation value
 </div>
   
   
-```
+
 
 
 
@@ -344,7 +344,7 @@ it returns mathematical combination value
 </div>
   
   
-```
+
 
 
 
