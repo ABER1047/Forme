@@ -815,7 +815,7 @@ console.log(convert_hour_to_sec(1)); //1 hour
 
 
 <details>
-<summary>Arrange</summary>
+<summary>Sort/Arrange</summary>
 
 
   
