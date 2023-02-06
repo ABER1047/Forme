@@ -63,6 +63,26 @@ This function returns the direction(radian) of a vector formed by the specified 
 </br>
 
 
+
+
+
+### correct_deg(deg)  /  correct_rad(rad)
+
+-------------
+
+<div align="center">
+
+This function corrects degree value when it is over than 360 degree or negative degree into positive 0~360 degree
+
+Example, 390 degree will be corrected to 30 degree.
+
+</div>
+
+</br>
+
+
+
+
 ### rad(deg)
 
 -------------
@@ -143,6 +163,23 @@ It is more convenient to use with deg(rad) function or rad(deg) functions.
 This function returns the length of a vector formed by the specified components [x1,y1] and [x2,y2]
 
 you can use this function when you want to get distance between two points
+
+</div>
+
+</br>
+
+
+
+
+### point_distance_3d(x1,y1,z1,x2,y2,z2)
+
+-------------
+
+<div align="center">
+
+This function takes the supplied components of the vector and returns the length (distance) of the vector. 
+  
+It works in exactly the same way as point_distance() but with the addition of factoring in the z value (depth) for use in 3D space.
 
 </div>
 
@@ -344,6 +381,113 @@ it returns mathematical combination value
 </div>
   
   
+  
+  
+  
+  
+</br></br></br>
+  
+### average(val0, val1, val2, …, max_val)
+
+-------------
+
+<div align="center">
+
+This function returns averaged value
+  
+</div>
+  
+
+
+
+
+
+</br></br></br>
+  
+### arithmetic_seq(firstTerm,lastTerm,n)
+
+-------------
+
+<div align="center">
+  
+<img width="450px" src = "https://images.saymedia-content.com/.image/t_share/MTc0NDcxMzQ5ODYxODg1NTc0/how-to-find-the-general-term-of-arithmetic-and-geometric-sequences.png" />
+  
+
+This function returns sum of arithmetic sequence
+  
+It is useful when you want to get sum of repeated things
+  
+example, if you want to get the result of "1+3+5+7+ ... + 77"
+  
+</div>
+
+
+
+
+
+</br></br></br>
+  
+### geometric_seq(firstTerm,commonRatio,n)
+
+-------------
+
+<div align="center">
+  
+<img width="450px" src = "https://images.saymedia-content.com/.image/t_share/MTc0NDcxMzQ5ODYxODg1NTc0/how-to-find-the-general-term-of-arithmetic-and-geometric-sequences.png" />
+  
+
+This function returns sum of geometric sequence
+  
+</div>
+
+
+
+
+
+</br></br></br>
+  
+### inf_geometric_seq(firstTerm,commonRatio)
+
+-------------
+
+<div align="center">
+
+This function returns sum of infinite geometric sequence
+  
+</div>
+  
+
+
+
+
+</br></br></br>
+  
+### highest_num(val0, val1, val2, …, max_val)
+
+-------------
+
+<div align="center">
+
+This function chooses highest number and returns it
+  
+</div>
+
+
+
+
+</br></br></br>
+  
+### highest_num_array(array)
+
+-------------
+
+<div align="center">
+
+This function chooses highest number from array and returns it
+  
+</div>
+  
+
 
 
 
@@ -656,6 +800,100 @@ console.log(convert_hour_to_sec(1)); //1 hour
   
 ```
   
+
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+<details>
+<summary>Arrange</summary>
+
+
+  
+### arrange_value(val0, val1, val2, …, max_val)
+
+-------------
+
+<div align="center">
+
+This function returns arranged array
+  
+The parameters have to be consist of only "numbers".
+
+</div>
+  
+  
+#### Example
+```
+  
+//it returns array [1,2,3,4,5,6]
+console.log(arrange_value(6,2,5,3,4,1));
+  
+```
+  
+  
+  
+</br></br></br>
+  
+### arrange_array(array)
+
+-------------
+
+<div align="center">
+
+This function returns arranged array
+  
+The perameter array have to be consist of only "numbers".
+
+</div>
+  
+  
+#### Example
+```
+var array_ = [6,2,5,3,4,1]
+  
+//it returns array [1,2,3,4,5,6]
+console.log(arrange_array(array_));
+  
+```
+  
+  
+  
+    
+  
+  
+</br></br></br>
+  
+### arrange_text(text_array)
+
+-------------
+
+<div align="center">
+
+This function returns arranged array which is sorted alphabetically
+
+</div>
+  
+  
+#### Example
+```
+var array_ = ["B","A","C","가","나","가가","가나",];
+  
+//it returns array ["A", "B", "C", "가", "가가", "가나", "나"]
+console.log(arrange_array(array_));
+  
+```
+
+
 
 
 </details>
