@@ -415,6 +415,10 @@ This function returns averaged value
 
 This function returns sum of arithmetic sequence
   
+It is useful when you want to get sum of repeated things
+  
+example, if you want to get the result of "1+3+5+7+ ... + 77"
+  
 </div>
 
 
@@ -796,6 +800,100 @@ console.log(convert_hour_to_sec(1)); //1 hour
   
 ```
   
+
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+<details>
+<summary>Arrange</summary>
+
+
+  
+### arrange_value(val0, val1, val2, …, max_val)
+
+-------------
+
+<div align="center">
+
+This function returns arranged array
+  
+The parameters have to be consist of only "numbers".
+
+</div>
+  
+  
+#### Example
+```
+  
+//it returns array [1,2,3,4,5,6]
+console.log(arrange_value(6,2,5,3,4,1));
+  
+```
+  
+  
+  
+  
+  
+### arrange_array(array)
+
+-------------
+
+<div align="center">
+
+This function returns arranged array
+  
+The perameter array have to be consist of only "numbers".
+
+</div>
+  
+  
+#### Example
+```
+var array_ = [6,2,5,3,4,1]
+  
+//it returns array [1,2,3,4,5,6]
+console.log(arrange_array(array_));
+  
+```
+  
+  
+  
+    
+  
+  
+  
+  
+### arrange_text(text_array)
+
+-------------
+
+<div align="center">
+
+This function returns arranged array which is sorted alphabetically
+
+</div>
+  
+  
+#### Example
+```
+var array_ = ["AAABB","AABBB","ABBBB","AAAAB","AAAAA","가","나","가가","가나","ABAB"];
+  
+//it returns array ['AAAAA', 'AAAAB', 'AAABB', 'ABAB', 'AABBB', 'ABBBB', '가', '가가', '가나', '나']
+console.log(arrange_array(array_));
+  
+```
+
+
 
 
 </details>
