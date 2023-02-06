@@ -63,6 +63,26 @@ This function returns the direction(radian) of a vector formed by the specified 
 </br>
 
 
+
+
+
+### correct_deg(deg)  /  correct_rad(rad)
+
+-------------
+
+<div align="center">
+
+This function corrects degree value when it is over than 360 degree or negative degree into positive 0~360 degree
+
+Example, 390 degree will be corrected to 30 degree.
+
+</div>
+
+</br>
+
+
+
+
 ### rad(deg)
 
 -------------
@@ -143,6 +163,23 @@ It is more convenient to use with deg(rad) function or rad(deg) functions.
 This function returns the length of a vector formed by the specified components [x1,y1] and [x2,y2]
 
 you can use this function when you want to get distance between two points
+
+</div>
+
+</br>
+
+
+
+
+### point_distance_3d(x1,y1,z1,x2,y2,z2)
+
+-------------
+
+<div align="center">
+
+This function takes the supplied components of the vector and returns the length (distance) of the vector. 
+  
+It works in exactly the same way as point_distance() but with the addition of factoring in the z value (depth) for use in 3D space.
 
 </div>
 
@@ -344,6 +381,109 @@ it returns mathematical combination value
 </div>
   
   
+  
+  
+  
+  
+</br></br></br>
+  
+### average(val0, val1, val2, …, max_val)
+
+-------------
+
+<div align="center">
+
+This function returns averaged value
+  
+</div>
+  
+
+
+
+
+
+</br></br></br>
+  
+### arithmetic_seq(firstTerm,lastTerm,n)
+
+-------------
+
+<div align="center">
+  
+<img width="450px" src = "https://images.saymedia-content.com/.image/t_share/MTc0NDcxMzQ5ODYxODg1NTc0/how-to-find-the-general-term-of-arithmetic-and-geometric-sequences.png" />
+  
+
+This function returns sum of arithmetic sequence
+  
+</div>
+
+
+
+
+
+</br></br></br>
+  
+### geometric_seq(firstTerm,commonRatio,n)
+
+-------------
+
+<div align="center">
+  
+<img width="450px" src = "https://images.saymedia-content.com/.image/t_share/MTc0NDcxMzQ5ODYxODg1NTc0/how-to-find-the-general-term-of-arithmetic-and-geometric-sequences.png" />
+  
+
+This function returns sum of geometric sequence
+  
+</div>
+
+
+
+
+
+</br></br></br>
+  
+### inf_geometric_seq(firstTerm,commonRatio)
+
+-------------
+
+<div align="center">
+
+This function returns sum of infinite geometric sequence
+  
+</div>
+  
+
+
+
+
+</br></br></br>
+  
+### highest_num(val0, val1, val2, …, max_val)
+
+-------------
+
+<div align="center">
+
+This function chooses highest number and returns it
+  
+</div>
+
+
+
+
+</br></br></br>
+  
+### highest_num_array(array)
+
+-------------
+
+<div align="center">
+
+This function chooses highest number from array and returns it
+  
+</div>
+  
+
 
 
 
