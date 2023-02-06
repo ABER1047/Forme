@@ -30,6 +30,36 @@ return Math.PI;
 
 
 
+/**return log10(value)
+@returns log10(value)
+**/
+function log10(value)
+{
+return Math.log10(value);
+}
+
+
+
+
+/**return log2(value)
+@returns log2(value)
+**/
+function log2(value)
+{
+return Math.log2(value);
+}
+
+
+
+/**return logn(base n,value)
+@returns logn(base n,value)
+**/
+function logn(base,value)
+{
+return Math.log10(value)/Math.log10(base);
+}
+
+
 
 
 
@@ -669,7 +699,7 @@ return Math.acos(_cosA_value_);
 
 
 
-/**Permutation
+/**This function returns Permutation value (nPr)
 @param n
 @param r
 @returns Permutation value
@@ -688,7 +718,7 @@ return return_value__;
 
 
 
-/**Combination
+/**This function returns Combination value (nCr)
 @param n
 @param r
 @returns Combination value
@@ -706,7 +736,7 @@ return permutation(x1,2)/permutation(x2,2);
 
 
 
-/**factorial
+/**This fucntion returns factorial value (n!)
 @param n
 @returns factorial value
 **/
@@ -723,12 +753,291 @@ return return_value__;
 
 
 
+/**lengthdir_x
+@param len
+@param dir
+@returns lengthdir_x value
+**/
+function lengthdir_x(len,dir)
+{
+return len*Math.cos(dir)
+}
+
+
+/**lengthdir_y
+@param len
+@param dir
+@returns lengthdir_y value
+**/
+function lengthdir_y(len,dir)
+{
+return len*Math.sin(dir)
+}
+
+
+
+/**This function returns distance (vector) value of point which is on third dimension
+@param x1
+@param y1
+@param z1
+@param x2
+@param y2
+@param z2
+@returns point distance 3d value
+**/
+function point_distance_3d(x1,y1,z1,x2,y2,z2)
+{
+//hypotenuse - 1
+var hypo_1 = point_distance(x1,y1,x2,y2);
+
+//hypotenuse - 2
+return sqrt(power(hypo_1,2) + power(z1 - z2,2));
+}
+
+
+
+
+
+
+/**This function corrects degree value when it is over than 360 degree or negative degree into positive 0~360 degree
+@param deg
+@returns correted degree value
+**/
+function correct_deg(deg)
+{
+    while(deg >= 0)
+    {
+    deg += 360;
+    }
+    
+    while(deg < 360)
+    {
+    deg -= 360;
+    }
+return deg;
+}
+
+
+/**This function corrects radian value when it is over than 360 degree or negative degree into positive 0~360 degree
+@param rad
+@returns correted rad value
+**/
+function correct_rad(rad)
+{
+var full_circle = Math.pi*2;
+    while(deg >= 0)
+    {
+    deg += full_circle;
+    }
+    
+    while(deg < full_circle)
+    {
+    deg -= full_circle;
+    }
+return deg;
+}
+
+
+
+
+
+/**This function returns averaged value
+@param val0
+@param val1
+@param val...
+@param max_val
+@returns return averaged value
+**/
+function average(val0, /*val1, val2, …, max_val*/)
+{
+var num_ = 0;
+var argument_length = arguments.length;
+    for(var i = 0; i < argument_length; i++)
+    {
+    num_ += arguments[i];
+    }
+return num_/argument_length;
+}
+
+
+
+
+
+/**This function returns sum of arithmetic sequence
+@param firstTerm
+@param lastTerm
+@param sequence_length
+@returns return sum of arithmetic sequence
+**/
+function arithmetic_seq(firstTerm,lastTerm,n)
+{
+return n*(firstTerm+lastTerm)*0.5;
+}
+
+
+
+/**This function returns sum of geometric sequence
+@param firstTerm
+@param commonRatio
+@param sequence_length
+@returns return sum of geometric sequence
+**/
+function geometric_seq(firstTerm,commonRatio,n)
+{
+return firstTerm*(Math.pow(commonRatio,sequence_length)-1)/(commonRatio-1);
+}
+
+
+
+
+/**This function returns sum of infinite geometric sequence
+@param firstTerm
+@param commonRatio
+@returns return sum of infinite geometric sequence
+**/
+function inf_geometric_seq(firstTerm,commonRatio)
+{
+return firstTerm/(1-commonRatio);
+}
+
+
+
+
+/**This function chooses highest number and returns it
+@param val0
+@param val1
+@param val...
+@param max_val
+@returns returns highest number
+**/
+function highest_num(val0, /*val1, val2, …, max_val*/)
+{
+var highest_num = arguments[0]
+    for (var i = 1; i < arguments.length; i++) 
+    { 
+        if (highest_num < arguments[i])
+        {
+        highest_num = arguments[i];
+        }
+    }
+return highest_num;
+}
+
+
+
+
+
+/**This function chooses highest number from array and returns it
+@param array
+@returns returns highest number
+**/
+function highest_num_array(array)
+{
+var highest_num = array[0]
+    for (var i = 1; i < array.length; i++) 
+    { 
+        if (highest_num < array[i])
+        {
+        highest_num = array[i];
+        }
+    }
+return highest_num;
+}
+
+
+
+
+/**This function returns arranged array
+@param val0
+@param val1
+@param val...
+@param max_val
+@returns return arranged array
+**/
+function arrange_value(val0, /*val1, val2, …, max_val*/)
+{
+    for (var i = 1; i < arguments.length; i++) 
+    { 
+    var value = arguments[i]; 
+
+        for (var j = i-1; j >= 0 && arguments[j] > value; j--) 
+        {
+        arguments[j+1] = arguments[j];
+        }
+    arguments[j+1] = value;
+    }
+return arguments;
+}
+
+
+
+/**This function returns arranged array
+@param array
+@returns return arranged array
+**/
+function arrange_array(array)
+{
+    for (var i = 1; i < array.length; i++) 
+    { 
+    var value = array[i]; 
+
+        for (var j = i-1; j >= 0 && array[j] > value; j--) 
+        {
+        array[j+1] = array[j];
+        }
+    array[j+1] = value;
+    }
+return array;
+}
+
+
+
+/**This function returns arranged text array
+@param text_array
+@returns return arranged text array
+**/
+function arrange_text(text_array)
+{
+var max_length = text_array[0].length;
+    for(var i = 0; i < text_array.length; i++)
+    {
+        if (max_length < text_array[i])
+        {
+        max_length = text_array[i];
+        }
+    }
+    
+    for(var k = 0; k < max_length; k++)
+    {
+        for (var i = 1; i < text_array.length; i++) 
+        { 
+        var saved_value_real = text_array[i];
+        var value = saved_value_real.charCodeAt(k);
+
+            for (var j = i-1; j >= 0 && text_array[j].charCodeAt(k) > value; j--) 
+            {
+            text_array[j+1] = text_array[j];
+            }
+        text_array[j+1] = saved_value_real;
+        }
+    }
+return text_array;
+}
+
+
+
+
 
 function test()
 {
-debug_log(factorial(4));
-debug_log(permutation(6,3));
+var array_ = ["AAABB","AABBB","ABBBB","AAAAB","AAAAA","가","나","가가","가나","ABAB"];
+debug_log(arrange_text(array_));
+
+
+var array_ = [8,6,2,45,6,1,235,2];
+debug_log(arrange_array(array_));
 }
 
 
 test();
+
