@@ -842,7 +842,7 @@ console.log(arrange_value(6,2,5,3,4,1));
   
   
   
-  
+</br></br></br>
   
 ### arrange_array(array)
 
@@ -871,7 +871,7 @@ console.log(arrange_array(array_));
     
   
   
-  
+</br></br></br>
   
 ### arrange_text(text_array)
 
