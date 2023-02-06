@@ -886,9 +886,9 @@ This function returns arranged array which is sorted alphabetically
   
 #### Example
 ```
-var array_ = ["AAABB","AABBB","ABBBB","AAAAB","AAAAA","가","나","가가","가나","ABAB"];
+var array_ = ["B","A","C","가","나","가가","가나",];
   
-//it returns array ['AAAAA', 'AAAAB', 'AAABB', 'ABAB', 'AABBB', 'ABBBB', '가', '가가', '가나', '나']
+//it returns array ["A", "B", "C", "가", "가가", "가나", "나"]
 console.log(arrange_array(array_));
   
 ```
