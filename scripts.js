@@ -1028,14 +1028,47 @@ return text_array;
 
 
 
+
+/**This function returns randomized array
+@param array
+@returns returns randomized array
+**/
+function randomize_array(array)
+{
+var temp_array = [];
+var array_length = array.length;
+    for(var i = array_length; i > 0; i--)
+    {
+    var ramdom_selection = irandom_range(0,i);
+    temp_array[i] = array[ramdom_selection];
+        for(var ii = ramdom_selection; ii < array_length-1; ii++)
+        {
+        array[ii] = array[ii+1];
+        }
+    }
+    
+return temp_array;
+}
+
+
+
+
+
 function test()
 {
 var array_ = ["AAABB","AABBB","ABBBB","AAAAB","AAAAA","가","나","가가","가나","ABAB"];
 debug_log(arrange_text(array_));
 
 
-var array_ = [8,6,2,45,6,1,235,2];
-debug_log(arrange_array(array_));
+var array_ = [];
+for(var i = 0; i < 1000; i++)
+{
+array_[i] = i;
+}
+
+console.time();
+debug_log(randomize_array(array_));
+console.timeEnd();
 }
 
 
