@@ -11,7 +11,7 @@ It is including some of **useful functions** & it makes you can use **sin, cos, 
 
 Some functions can be low performance than other JS libraries
 
-That's because it is designed that it can be easily translated into other languages.
+That's because it is designed that it can be easily converted to other languages.
 
 -------------
 
