@@ -596,8 +596,9 @@ return parseInt(audio.currentTime);
 **/
 function convert_sec_to_clocktime(seconds)
 {
-var cal_min = Math.floor(seconds/60);
 var cal_h = Math.floor(seconds/3600);
+var cal_min = Math.floor(seconds/60)-cal_h*60;
+var displayed_seconds = seconds-cal_min*60
 var total_mes = "";
     if (cal_h != 0)
     {
@@ -606,20 +607,20 @@ var total_mes = "";
     
     if (cal_min >= 10)
     {
-    total_mes = total_mes+cal_min+":";
+    total_mes = total_mes+(cal_min)+":";
     }
     else
     {
-    total_mes = total_mes+"0"+cal_min+":";
+    total_mes = total_mes+"0"+(cal_min)+":";
     }
     
-    if (seconds >= 10)
+    if (displayed_seconds >= 10)
     {
-    total_mes = total_mes+seconds;
+    total_mes = total_mes+(displayed_seconds);
     }
     else
     {
-    total_mes = total_mes+"0"+seconds;
+    total_mes = total_mes+"0"+(displayed_seconds);
     }
 
 return total_mes;
