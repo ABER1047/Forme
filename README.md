@@ -238,6 +238,8 @@ array[2] = function of line
 
 You can check these values with below code
 
+</div>
+
 #### Example
 ```
 
@@ -262,6 +264,8 @@ This function returns distance of point to line (The point do not have to have a
 x1,y1,x2,y2 parameter should be the value of points which make up the line.
 
 And, x3,y3 should be the value of another point.
+
+</div>
 
 #### Example
 ```
