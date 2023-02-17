@@ -153,7 +153,7 @@ It is more convenient to use with deg(rad) function or rad(deg) functions.
 
 
 <details>
-<summary>Distance/Collision</summary>
+<summary>Distance/Collision/Geometry</summary>
 
 
 ### point_distance(x1,y1,x2,y2)
@@ -215,6 +215,62 @@ This function returns "true" when a point met or be inside a circle
 <img width="550px" src = imgs/img_place_meeting.PNG />
 
 This function returns "true" when two circles(collision mask) met
+
+</div>
+
+</br>
+
+
+
+
+### get_line_function(x1,y1,x2,y2)
+
+-------------
+
+<div align="center">
+
+This function returns inclination, y-intercept and function of line with two points of line.
+
+The returned array have these values.
+array[0] = inclination of line
+array[1] = y-intercept
+array[2] = function of line
+
+You can check these values with below code
+
+#### Example
+```
+
+//it will show you "[4, 1, 'y=4x+1']".
+console.log(get_line_function(0,1,1,5))
+
+
+```
+
+
+
+
+
+### point_to_line_distance(x1,y1,x2,y2,x3,y3)
+
+-------------
+
+<div align="center">
+
+This function returns distance of point to line (The point do not have to have a position on only line).
+
+x1,y1,x2,y2 parameter should be the value of points which make up the line.
+
+And, x3,y3 should be the value of another point.
+
+#### Example
+```
+
+//it will show you the value "3 x √2" which is same as "4.242..."
+console.log(point_to_line_distance(0,0,6,6,0,6))
+
+
+```
 
 </div>
 
