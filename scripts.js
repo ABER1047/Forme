@@ -1054,6 +1054,45 @@ return temp_array;
 
 
 
+/**This function returns inclination, y-intercept and function of line with two points of line
+@param x1
+@param y1
+@param x2
+@param y2
+@returns returns randomized array
+**/
+function get_line_function(x1,y1,x2,y2)
+{
+var temp_array = [];
+var inclination = (y2-y1)/(x2-x1);
+temp_array[0] = inclination;
+temp_array[1] = y1-inclination*x1;
+temp_array[2] = "y="+inclination+"x+"+temp_array[1];
+return temp_array;
+}
+
+
+
+
+/**This function returns distance of point to line (The point do not have to have a position on only line)
+@param x1(point of line)
+@param y1(point of line)
+@param x2(point of line)
+@param y2(point of line)
+@param x3(point)
+@param y3(point)
+@returns returns randomized array
+**/
+function point_to_line_distance(x1,y1,x2,y2,x3,y3)
+{
+var inclination = (y2-y1)/(x2-x1);
+return Math.abs(inclination*(x3-x1)+y1-y3)/Math.sqrt(Math.pow(inclination,2)+1);
+}
+
+
+
+
+
 
 function test()
 {
@@ -1070,6 +1109,11 @@ array_[i] = i;
 console.time();
 debug_log(randomize_array(array_));
 console.timeEnd();
+
+
+debug_log(get_line_function(0,1,1,5));
+
+debug_log(point_to_line_distance(0,0,6,6,0,6));
 }
 
 
