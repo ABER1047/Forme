@@ -270,7 +270,7 @@ And, x3,y3 should be the value of another point.
 #### Example
 ```
 
-//it will show you the value "3 x √2" which is same as "4.242..."
+//it will show you the value "3 x √2" which same as "4.242..."
 console.log(point_to_line_distance(0,0,6,6,0,6))
 
 
