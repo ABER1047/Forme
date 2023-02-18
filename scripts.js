@@ -560,7 +560,7 @@ var imgs_obj = [];
         imgs_obj[_i_].style.left = "0px";
         imgs_obj[_i_].style.display = "block";
         imgs_obj[_i_].zIndex = 9999;
-        //__preloaded_imgs__.style.opacity = 0;
+        imgs_obj[_i_].style.opacity = 0;
         $("input").after(imgs_obj[_i_]);
         }
     }
