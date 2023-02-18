@@ -551,22 +551,20 @@ function preload_images(file_directory, type, image_name1/*, image_name...*/)
     {
     var __preloaded_imgs__ = document.createElement("img");
     __preloaded_imgs__.src = file_directory+"/"+arguments[_i_]+"."+type;
-    __preloaded_imgs__.style.width = "0px";
+    //__preloaded_imgs__.style.width = "0px";
     __preloaded_imgs__.style.position = "fixed";
     __preloaded_imgs__.style.top = "0px";
     __preloaded_imgs__.style.left = "0px";
     $("input").after(__preloaded_imgs__);
-    
-    setTimeout(del_preloaded_imgs_ele,10000,__preloaded_imgs__);
     }
 
 return true;
 }
 
-function del_preloaded_imgs_ele(__target_img__)
-{
-__target_img__.remove();
-}
+//function del_preloaded_imgs_ele(__target_img__)
+//{
+//__target_img__.remove();
+//}
 
 /**get remaining audio/video time
 @param audio
@@ -1100,15 +1098,15 @@ var array_ = ["AAABB","AABBB","ABBBB","AAAAB","AAAAA","가","나","가가","가�
 debug_log(arrange_text(array_));
 
 
-var array_ = [];
-for(var i = 0; i < 1000; i++)
-{
-array_[i] = i;
-}
+//var array_ = [];
+//for(var i = 0; i < 1000; i++)
+//{
+//array_[i] = i;
+//}
 
-console.time();
-debug_log(randomize_array(array_));
-console.timeEnd();
+//console.time();
+//debug_log(randomize_array(array_));
+//console.timeEnd();
 
 
 debug_log(get_line_function(0,1,1,5));
