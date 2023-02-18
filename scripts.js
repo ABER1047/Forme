@@ -550,16 +550,19 @@ function preload_images(file_directory, type, image_name1/*, image_name...*/)
 var imgs_obj = [];
     for(var _i_ = 2; _i_ < arguments.length; _i_++)
     {
-    imgs_obj[_i_] = document.createElement("img");
-    imgs_obj[_i_].src = file_directory+"/"+arguments[_i_]+"."+type;
-    //__preloaded_imgs__.style.width = "0px";
-    imgs_obj[_i_].style.position = "fixed";
-    imgs_obj[_i_].style.top = "0px";
-    imgs_obj[_i_].style.left = "0px";
-    imgs_obj[_i_].style.display = "block";
-    imgs_obj[_i_].zIndex = 9999;
-    //__preloaded_imgs__.style.opacity = 0;
-    $("input").after(imgs_obj[_i_]);
+        if (arguments[_i_] != undefined)
+        {
+        imgs_obj[_i_] = document.createElement("img");
+        imgs_obj[_i_].src = file_directory+"/"+arguments[_i_]+"."+type;
+        //__preloaded_imgs__.style.width = "0px";
+        imgs_obj[_i_].style.position = "fixed";
+        imgs_obj[_i_].style.top = "0px";
+        imgs_obj[_i_].style.left = "0px";
+        imgs_obj[_i_].style.display = "block";
+        imgs_obj[_i_].zIndex = 9999;
+        //__preloaded_imgs__.style.opacity = 0;
+        $("input").after(imgs_obj[_i_]);
+        }
     }
 
 console.log("images are preloaded");
