@@ -562,6 +562,7 @@ var imgs_obj = [];
     $("input").after(imgs_obj[_i_]);
     }
 
+debug_log("images are preloaded");
 return imgs_obj;
 }
 
