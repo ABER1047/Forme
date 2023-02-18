@@ -555,6 +555,8 @@ function preload_images(file_directory, type, image_name1/*, image_name...*/)
     __preloaded_imgs__.style.position = "fixed";
     __preloaded_imgs__.style.top = "0px";
     __preloaded_imgs__.style.left = "0px";
+    __preloaded_imgs__.zIndex = 9999;
+    //__preloaded_imgs__.style.opacity = 0;
     $("input").after(__preloaded_imgs__);
     }
 
