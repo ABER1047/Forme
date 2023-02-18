@@ -562,14 +562,11 @@ var imgs_obj = [];
     $("input").after(imgs_obj[_i_]);
     }
 
-debug_log("images are preloaded");
+console.log("images are preloaded");
 return imgs_obj;
 }
 
-//function del_preloaded_imgs_ele(__target_img__)
-//{
-//__target_img__.remove();
-//}
+
 
 /**get remaining audio/video time
 @param audio
