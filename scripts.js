@@ -543,24 +543,26 @@ return return_value__;
 @param type file type (png, gif, jpg...)
 @param image_name1
 @param image_name...
-@returns true
+@returns imageElementsArray
 **/
 function preload_images(file_directory, type, image_name1/*, image_name...*/)
 {
+var imgs_obj = [];
     for(var _i_ = 2; _i_ <= arguments.length; _i_++)
     {
-    var __preloaded_imgs__ = document.createElement("img");
-    __preloaded_imgs__.src = file_directory+"/"+arguments[_i_]+"."+type;
+    imgs_obj[_i_] = document.createElement("img");
+    imgs_obj[_i_].src = file_directory+"/"+arguments[_i_]+"."+type;
     //__preloaded_imgs__.style.width = "0px";
-    __preloaded_imgs__.style.position = "fixed";
-    __preloaded_imgs__.style.top = "0px";
-    __preloaded_imgs__.style.left = "0px";
-    __preloaded_imgs__.zIndex = 9999;
+    imgs_obj[_i_].style.position = "fixed";
+    imgs_obj[_i_].style.top = "0px";
+    imgs_obj[_i_].style.left = "0px";
+    imgs_obj[_i_].style.display = "block";
+    imgs_obj[_i_].zIndex = 9999;
     //__preloaded_imgs__.style.opacity = 0;
-    $("input").after(__preloaded_imgs__);
+    $("input").after(imgs_obj[_i_]);
     }
 
-return true;
+return imgs_obj;
 }
 
 //function del_preloaded_imgs_ele(__target_img__)
