@@ -548,7 +548,7 @@ return return_value__;
 function preload_images(file_directory, type, image_name1/*, image_name...*/)
 {
 var imgs_obj = [];
-    for(var _i_ = 2; _i_ <= arguments.length; _i_++)
+    for(var _i_ = 2; _i_ < arguments.length; _i_++)
     {
     imgs_obj[_i_] = document.createElement("img");
     imgs_obj[_i_].src = file_directory+"/"+arguments[_i_]+"."+type;
