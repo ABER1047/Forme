@@ -1095,7 +1095,7 @@ return Math.abs(inclination*(x3-x1)+y1-y3)/Math.sqrt(Math.pow(inclination,2)+1);
 /**This function returns current region country
 @returns returns current region country
 **/
-function getCountry() 
+function get_country() 
 {
 	var countries = {
 		AD: "Andorra",
@@ -3968,7 +3968,7 @@ function getCountry()
 /**This function returns current region state
 @returns returns current region state
 **/
-function getState()
+function get_state()
 {
 		const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
