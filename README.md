@@ -20,7 +20,7 @@ That's because it is designed that it can be easily converted to other languages
 At first, define below code and check the below functions
 
 ```
-<script src = "https://cdn.jsdelivr.net/gh/ABER1047/Forme@main/scripts.js"></script>
+<script src = "https://cdn.jsdelivr.net/gh/ABER1047/Forme/scripts.js"></script>
 ```
 
 </br>
