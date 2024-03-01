@@ -1092,36 +1092,9 @@ return Math.abs(inclination*(x3-x1)+y1-y3)/Math.sqrt(Math.pow(inclination,2)+1);
 
 
 
-
-
-function test()
-{
-var array_ = ["AAABB","AABBB","ABBBB","AAAAB","AAAAA","가","나","가가","가나","ABAB"];
-debug_log(arrange_text(array_));
-
-
-//var array_ = [];
-//for(var i = 0; i < 1000; i++)
-//{
-//array_[i] = i;
-//}
-
-//console.time();
-//debug_log(randomize_array(array_));
-//console.timeEnd();
-
-
-debug_log(get_line_function(0,1,1,5));
-
-debug_log(point_to_line_distance(0,0,6,6,0,6));
-}
-
-
-//test();
-
-
-
-//get current region country
+/**This function returns current region country
+@returns returns current region country
+**/
 function getCountry() 
 {
 	var countries = {
@@ -3991,7 +3964,10 @@ function getCountry()
 	return country;
 }
 
-//get current region state
+
+/**This function returns current region state
+@returns returns current region state
+**/
 function getState()
 {
 		const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -4005,5 +3981,38 @@ function getState()
 	return state
 	
 }
+
+
+
+
+
+
+function test()
+{
+    var array_ = ["AAABB","AABBB","ABBBB","AAAAB","AAAAA","가","나","가가","가나","ABAB"];
+    debug_log(arrange_text(array_));
+
+
+    //var array_ = [];
+    //for(var i = 0; i < 1000; i++)
+    //{
+    //array_[i] = i;
+    //}
+
+    //console.time();
+    //debug_log(randomize_array(array_));
+    //console.timeEnd();
+
+
+    debug_log(get_line_function(0,1,1,5));
+
+    debug_log(point_to_line_distance(0,0,6,6,0,6));
+}
+
+
+//test();
+
+
+
 
 
