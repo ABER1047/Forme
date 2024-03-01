@@ -3955,7 +3955,8 @@ function get_country()
 
 	const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-	if (timezone === "" || !timezone) {
+	if (timezone === "" || !timezone) 
+    {
 		return null;
 	}
 
@@ -3972,7 +3973,8 @@ function get_state()
 {
 		const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-	if (timezone === "" || !timezone) {
+	if (timezone === "" || !timezone) 
+    {
 		return null;
 	}
 	
