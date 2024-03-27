@@ -4018,3 +4018,29 @@ function test()
 
 
 
+
+const times__ = [];
+let fps___;
+var is_showing_fps__ = false;
+
+function show_fps(tmp_val) 
+{
+    is_showing_fps__ = tmp_val;
+    window.requestAnimationFrame(() =>
+    {
+        if (is_showing_fps__)
+        {
+            const now = performance.now();
+            while (times__.length > 0 && times__[0] <= now - 1000)
+            {
+                times__.shift();
+            }
+            times__.push(now);
+            fps___ = times__.length;
+            debug_log("fps : "+fps___)
+            show_fps();
+        }
+    });
+}
+
+show_fps();
