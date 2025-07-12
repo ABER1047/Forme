@@ -958,6 +958,75 @@ console.log(arrange_array(array_));
 ```
 
 
+</details>
+
+
+
+
+
+
+
+
+
+
+<details>
+<summary>Etc.</summary>
+
+
+
+### show_fps(true/false)
+
+-------------
+
+<div align="center">
+
+it returns current fps on console log.
+
+
+</div>
+  
+  
+#### Example
+```
+
+//turn on
+show_fps(true);
+
+//turn off
+show_fps(false);
+  
+```
+
+
+</br></br></br>
+
+### get_country()
+
+-------------
+
+<div align="center">
+
+it returns the visiter's region.
+if you visit the website in South Korea, it returns "South Korea";
+(for more details, you can read the code in here)
+https://github.com/ABER1047/Forme/blob/main/scripts.js#L1120
+
+
+</div>
+  
+  
+#### Example
+```
+
+//returns visiter's country name
+get_country();
+  
+```
 
 
 </details>
+
+
+
+
+
