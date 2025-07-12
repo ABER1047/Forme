@@ -1,12 +1,10 @@
-
-
 /**convert degree to radian
 @param deg
 @returns rad
 **/
 function rad(deg)
 {
-return (Math.PI/180)*deg;
+    return (Math.PI/180)*deg;
 }
 
 
@@ -16,7 +14,7 @@ return (Math.PI/180)*deg;
 **/
 function deg(rad)
 {
-return (180/Math.PI)*deg;
+    return (180/Math.PI)*deg;
 }
 
 
@@ -25,7 +23,7 @@ return (180/Math.PI)*deg;
 **/
 function pi()
 {
-return Math.PI;
+    return Math.PI;
 }
 
 
@@ -35,7 +33,7 @@ return Math.PI;
 **/
 function log10(value)
 {
-return Math.log10(value);
+    return Math.log10(value);
 }
 
 
@@ -46,7 +44,7 @@ return Math.log10(value);
 **/
 function log2(value)
 {
-return Math.log2(value);
+    return Math.log2(value);
 }
 
 
@@ -56,7 +54,7 @@ return Math.log2(value);
 **/
 function logn(base,value)
 {
-return Math.log10(value)/Math.log10(base);
+    return Math.log10(value)/Math.log10(base);
 }
 
 
@@ -69,7 +67,7 @@ return Math.log10(value)/Math.log10(base);
 **/
 function cos(rad)
 {
-return Math.cos(rad);
+    return Math.cos(rad);
 }
 
 /**arccosineh
@@ -78,7 +76,7 @@ return Math.cos(rad);
 **/
 function acosh(rad)
 {
-return Math.acosh(rad);
+    return Math.acosh(rad);
 }
 
 /**arccosine
@@ -87,7 +85,7 @@ return Math.acosh(rad);
 **/
 function acos(rad)
 {
-return Math.acos(rad);
+    return Math.acos(rad);
 }
 
 /**arccosine
@@ -96,7 +94,7 @@ return Math.acos(rad);
 **/
 function arccos(rad)
 {
-return Math.acos(rad);
+    return Math.acos(rad);
 }
 
 
@@ -108,7 +106,7 @@ return Math.acos(rad);
 **/
 function sin(rad)
 {
-return Math.sin(rad);
+    return Math.sin(rad);
 }
 
 /**arcsine
@@ -117,7 +115,7 @@ return Math.sin(rad);
 **/
 function asin(rad)
 {
-return Math.asin(rad);
+    return Math.asin(rad);
 }
 
 /**arcsine
@@ -126,7 +124,7 @@ return Math.asin(rad);
 **/
 function arcsin(rad)
 {
-return Math.asin(rad);
+    return Math.asin(rad);
 }
 
 /**arcsineh
@@ -135,7 +133,7 @@ return Math.asin(rad);
 **/
 function asinh(rad)
 {
-return Math.asinh(rad);
+    return Math.asinh(rad);
 }
 
 
@@ -147,7 +145,7 @@ return Math.asinh(rad);
 **/
 function tan(rad)
 {
-return Math.tan(rad);
+    return Math.tan(rad);
 }
 
 /**arctangenth
@@ -156,7 +154,7 @@ return Math.tan(rad);
 **/
 function atanh(rad)
 {
-return Math.atanh(rad);
+    return Math.atanh(rad);
 }
 
 /**arctangent2
@@ -165,7 +163,7 @@ return Math.atanh(rad);
 **/
 function atan2(rad)
 {
-return Math.atan2(rad);
+    return Math.atan2(rad);
 }
 
 /**arctangent
@@ -174,7 +172,7 @@ return Math.atan2(rad);
 **/
 function atan(rad)
 {
-return Math.atan(rad);
+    return Math.atan(rad);
 }
 
 /**arctangent
@@ -183,7 +181,7 @@ return Math.atan(rad);
 **/
 function arctan(rad)
 {
-return Math.atan(rad);
+    return Math.atan(rad);
 }
 
 
@@ -196,7 +194,7 @@ return Math.atan(rad);
 **/
 function sqrt(value)
 {
-return Math.sqrt(value);
+    return Math.sqrt(value);
 }
 
 /**sign
@@ -205,7 +203,7 @@ return Math.sqrt(value);
 **/
 function sign(value)
 {
-return Math.sign(value);
+    return Math.sign(value);
 }
 
 /**round
@@ -214,7 +212,7 @@ return Math.sign(value);
 **/
 function round(value)
 {
-return Math.round(value)
+    return Math.round(value)
 }
 
 /**floor
@@ -223,7 +221,7 @@ return Math.round(value)
 **/
 function floor(value)
 {
-return Math.floor(value);
+    return Math.floor(value);
 }
 
 /**power
@@ -232,7 +230,7 @@ return Math.floor(value);
 **/
 function power(base,exponent)
 {
-return Math.pow(base,exponent);
+    return Math.pow(base,exponent);
 }
 
 /**power
@@ -241,7 +239,7 @@ return Math.pow(base,exponent);
 **/
 function pow(base,exponent)
 {
-return Math.pow(base,exponent);
+    return Math.pow(base,exponent);
 }
 
 /**absolute value
@@ -250,7 +248,7 @@ return Math.pow(base,exponent);
 **/
 function abs(value)
 {
-return Math.abs(value);
+    return Math.abs(value);
 }
 
 
@@ -261,7 +259,9 @@ return Math.abs(value);
 **/
 function irandom_range(range_1,range_2)
 {
-return Math.floor(Math.random()*range_2 | range_1);
+    var min = Math.ceil(Math.min(range_1, range_2));
+    var max = Math.floor(Math.max(range_1, range_2));
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 /**You can get distance from point to point
@@ -273,7 +273,7 @@ return Math.floor(Math.random()*range_2 | range_1);
 **/
 function point_distance(x1,y1,x2,y2)
 {
-return sqrt(power(x1 - x2,2) + power(y1 - y2,2));
+    return sqrt(power(x1 - x2,2) + power(y1 - y2,2));
 }
 
 
@@ -286,7 +286,7 @@ return sqrt(power(x1 - x2,2) + power(y1 - y2,2));
 **/
 function point_direction(x1,y1,x2,y2)
 {
-return Math.atan2(y2 - y1, x2 - x1);
+    return Math.atan2(y2 - y1, x2 - x1);
 }
 
 
@@ -295,15 +295,15 @@ return Math.atan2(y2 - y1, x2 - x1);
 **/
 function irandom_return()
 {
-var random_value______ = Math.floor(Math.random()*100 | 1);
+    var random_value______ = Math.floor(Math.random()*100 | 1);
 
     if (random_value______ <= 50)
     {
-    return 1;
+        return 1;
     }
     else
     {
-    return -1;
+        return -1;
     }
 }
 
@@ -317,9 +317,9 @@ var random_value______ = Math.floor(Math.random()*100 | 1);
 **/
 function choose(val0, /*val1, val2, …, max_val*/)
 {
-var random_choosed__ = irandom_range(0,arguments.length);
-//console.log(arguments[random_choosed__]);
-return arguments[random_choosed__];
+    var random_choosed__ = irandom_range(0,arguments.length);
+    //console.log(arguments[random_choosed__]);
+    return arguments[random_choosed__];
 }
 
 /**checking that these two circle met
@@ -335,11 +335,11 @@ function place_meeting_circle(x1,y1,x2,y2,rad1,rad2)
 {
     if (sqrt(power(x1 - x2,2) + power(y1 - y2,2)) <= rad1+rad2)
     {
-    return true;
+        return true;
     }
     else
     {
-    return false;
+        return false;
     }
 }
 
@@ -355,11 +355,11 @@ function place_meeting_point(x1,y1,x2,y2,rad)
 {
     if (sqrt(power(x1 - x2,2) + power(y1 - y2,2)) <= rad)
     {
-    return true;
+        return true;
     }
     else
     {
-    return false;
+        return false;
     }
 }
 
@@ -371,13 +371,13 @@ function place_meeting_point(x1,y1,x2,y2,rad)
 **/
 function sign_without(value)
 {
-var _____var = Math.sign(value);
+    var _____var = Math.sign(value);
     if (_____var == 0)
     {
-    _____var = choose(-1,1);
+        _____var = choose(-1,1);
     }
 
-return Math.sign(value);
+    return Math.sign(value);
 }
 
 
@@ -390,17 +390,17 @@ return Math.sign(value);
 **/
 function correct_value(value,min,max)
 {
-var corrected_value__ = value;
+    var corrected_value__ = value;
     if (value < min)
     {
-    corrected_value__ = min;
+        corrected_value__ = min;
     }
     
     if (value > max)
     {
-    corrected_value__ = max;
+        corrected_value__ = max;
     }
-return corrected_value__;
+    return corrected_value__;
 }
 
 
@@ -413,16 +413,16 @@ return corrected_value__;
 **/
 function merge_color(color_value1, color_value2, amount/*, debug_mode*/)
 {
-debug_mode = debug_mode || 0;
+    debug_mode = debug_mode || 0;
 
     if (amount > 1)
     {
-    amount = 1;
+        amount = 1;
     }
     
     if (amount < 0)
     {
-    amount = 0;
+        amount = 0;
     }
 
     var length_color1 = color_value1.length;
@@ -431,60 +431,60 @@ debug_mode = debug_mode || 0;
     {
         for(var i = 1; i <= 4; i++)
         {
-        color_value1 += color_value1[i]+color_value1[i];
+            color_value1 += color_value1[i]+color_value1[i];
         }
     }
     else
     {
-    color_value1 = color_value1.substring(1);
+        color_value1 = color_value1.substring(1);
     }
     
     if (length_color2 == 4)
     {
         for(var i = 1; i <= 4; i++)
         {
-        color_value2 += color_value2[i]+color_value2[i];
+            color_value2 += color_value2[i]+color_value2[i];
         }
     }
     else
     {
-    color_value2 = color_value2.substring(1);
+        color_value2 = color_value2.substring(1);
     }
 
 
-color_value1 = [parseInt(color_value1[0] + color_value1[1], 16), parseInt(color_value1[2] + color_value1[3], 16), parseInt(color_value1[4] + color_value1[5], 16)];
-color_value2 = [parseInt(color_value2[0] + color_value2[1], 16), parseInt(color_value2[2] + color_value2[3], 16), parseInt(color_value2[4] + color_value2[5], 16)];
+    color_value1 = [parseInt(color_value1[0] + color_value1[1], 16), parseInt(color_value1[2] + color_value1[3], 16), parseInt(color_value1[4] + color_value1[5], 16)];
+    color_value2 = [parseInt(color_value2[0] + color_value2[1], 16), parseInt(color_value2[2] + color_value2[3], 16), parseInt(color_value2[4] + color_value2[5], 16)];
 
-var total_color = [(1 - amount) * color_value1[0] + amount * color_value2[0], (1 - amount) * color_value1[1] + amount * color_value2[1], (1 - amount) * color_value1[2] + amount * color_value2[2]];
-total_color = "#" + int_to_hex(total_color[0]) + int_to_hex(total_color[1]) + int_to_hex(total_color[2]);
-
-
-
-if (debug_mode == 1)
-{
-//color output to canvas
-var canvas_ = document.createElement("canvas");
-var ctx = canvas_.getContext("2d");
-canvas_.width = 128;
-canvas_.height = 128;
-document.body.appendChild(canvas_);
-
-ctx.fillStyle = total_color;
-ctx.fillRect(0, 0, 128, 128);
-}
+    var total_color = [(1 - amount) * color_value1[0] + amount * color_value2[0], (1 - amount) * color_value1[1] + amount * color_value2[1], (1 - amount) * color_value1[2] + amount * color_value2[2]];
+    total_color = "#" + int_to_hex(total_color[0]) + int_to_hex(total_color[1]) + int_to_hex(total_color[2]);
 
 
-return total_color;
+
+    if (debug_mode == 1)
+    {
+        //color output to canvas
+        var canvas_ = document.createElement("canvas");
+        var ctx = canvas_.getContext("2d");
+        canvas_.width = 128;
+        canvas_.height = 128;
+        document.body.appendChild(canvas_);
+
+        ctx.fillStyle = total_color;
+        ctx.fillRect(0, 0, 128, 128);
+    }
+
+
+    return total_color;
 }
 
 function int_to_hex(num)
 {
-var hex = Math.round(num).toString(16);
+    var hex = Math.round(num).toString(16);
     if (hex.length == 1)
     {
-    hex = '0' + hex;
+        hex = '0' + hex;
     }
-return hex;
+    return hex;
 }
 
 
@@ -497,8 +497,8 @@ return hex;
 **/
 function debug_log(value)
 {
-console.log(value);
-return true;
+    console.log(value);
+    return true;
 }
 
 
@@ -512,28 +512,28 @@ return true;
 **/
 function set_value_case(argument0,argument1,argument2,argument3)
 {
-var return_value__ = argument0;
+    var return_value__ = argument0;
 
-	if (argument3 == true) //inner
-	{
-		if (argument0 < argument1)
-		{
-		return_value__ = argument1;
-		}
-		
-		if (argument0 > argument2)
-		{
-		return_value__ = argument2;
-		}
-	}
-	else
-	{
-		if (argument0 > argument1 && argument0 < argument2)
-		{
-		return_value__ = argument0;
-		}
-	}
-return return_value__;
+    if (argument3 == true) //inner
+    {
+        if (argument0 < argument1)
+        {
+            return_value__ = argument1;
+        }
+
+        if (argument0 > argument2)
+        {
+            return_value__ = argument2;
+        }
+    }
+    else
+    {
+        if (argument0 > argument1 && argument0 < argument2)
+        {
+            return_value__ = argument0;
+        }
+    }
+    return return_value__;
 }
 
 
@@ -547,23 +547,23 @@ return return_value__;
 **/
 function preload_images(file_directory, type, image_name1/*, image_name...*/)
 {
-var imgs_obj = [];
+    var imgs_obj = [];
     for(var _i_ = 2; _i_ < arguments.length; _i_++)
     {
         if (arguments[_i_] != undefined)
         {
-        imgs_obj[_i_] = document.createElement("img");
-        imgs_obj[_i_].src = file_directory+"/"+arguments[_i_]+"."+type;
-        //__preloaded_imgs__.style.width = "0px";
-        imgs_obj[_i_].style.position = "fixed";
-        imgs_obj[_i_].style.display = "block";
-        imgs_obj[_i_].style.opacity = 0;
-        $("input").after(imgs_obj[_i_]);
+            imgs_obj[_i_] = document.createElement("img");
+            imgs_obj[_i_].src = file_directory+"/"+arguments[_i_]+"."+type;
+            //__preloaded_imgs__.style.width = "0px";
+            imgs_obj[_i_].style.position = "fixed";
+            imgs_obj[_i_].style.display = "block";
+            imgs_obj[_i_].style.opacity = 0;
+            $("input").after(imgs_obj[_i_]);
         }
     }
 
-console.log("images are preloaded");
-return imgs_obj;
+    console.log("images are preloaded");
+    return imgs_obj;
 }
 
 
@@ -574,9 +574,9 @@ return imgs_obj;
 **/
 function get_remaining_time(audio)
 {
-var duration = parseInt(audio.duration),
-currentTime = parseInt(audio.currentTime);
-return (duration - currentTime);
+    var duration = parseInt(audio.duration),
+    currentTime = parseInt(audio.currentTime);
+    return (duration - currentTime);
 }
 
 
@@ -586,7 +586,7 @@ return (duration - currentTime);
 **/
 function get_current_time(audio)
 {
-return parseInt(audio.currentTime);
+    return parseInt(audio.currentTime);
 }
 
 
@@ -596,34 +596,34 @@ return parseInt(audio.currentTime);
 **/
 function convert_sec_to_clocktime(seconds)
 {
-var cal_h = Math.floor(seconds/3600);
-var cal_min = Math.floor(seconds/60)-cal_h*60;
-var displayed_seconds = seconds-cal_min*60
-var total_mes = "";
+    var cal_h = Math.floor(seconds/3600);
+    var cal_min = Math.floor(seconds/60)-cal_h*60;
+    var displayed_seconds = seconds-cal_min*60
+    var total_mes = "";
     if (cal_h != 0)
     {
-    total_mes = cal_h+":";
+        total_mes = cal_h+":";
     }
     
     if (cal_min >= 10)
     {
-    total_mes = total_mes+(cal_min)+":";
+        total_mes = total_mes+(cal_min)+":";
     }
     else
     {
-    total_mes = total_mes+"0"+(cal_min)+":";
+        total_mes = total_mes+"0"+(cal_min)+":";
     }
     
     if (displayed_seconds >= 10)
     {
-    total_mes = total_mes+(displayed_seconds);
+        total_mes = total_mes+(displayed_seconds);
     }
     else
     {
-    total_mes = total_mes+"0"+(displayed_seconds);
+        total_mes = total_mes+"0"+(displayed_seconds);
     }
 
-return total_mes;
+    return total_mes;
 }
 
 
@@ -633,7 +633,7 @@ return total_mes;
 **/
 function convert_min_to_sec(minutes)
 {
-return minutes*60;
+    return minutes*60;
 }
 
 /**converts hours to minutes
@@ -642,7 +642,7 @@ return minutes*60;
 **/
 function convert_hour_to_min(hours)
 {
-return hours*60;
+    return hours*60;
 }
 
 
@@ -652,7 +652,7 @@ return hours*60;
 **/
 function convert_hour_to_sec(hours)
 {
-return hours*3600;
+    return hours*3600;
 }
 
 
@@ -666,16 +666,16 @@ function get_file_directory(input)
 {
     for(var i = 0; i < input.originalEvent.srcElement.files.length; i++) 
     {
-    var file = input.originalEvent.srcElement.files[i];
+        var file = input.originalEvent.srcElement.files[i];
     }
     
-var reader = new FileReader();
-reader.readAsDataURL(file);
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
     reader.onloadend = function() 
     {
-    return reader.result;
+        return reader.result;
     }
-console.log("file"+reader.result);
+    console.log("file"+reader.result);
 }
 
 
@@ -691,11 +691,11 @@ console.log("file"+reader.result);
 **/
 function point_direction2(x1,y1,x2,y2,x3,y3)
 {
-var _c_ = Math.pow(x2-x1,2)+Math.pow(y2-y1,2);
-var _a_ = Math.pow(x3-x1,2)+Math.pow(y3-y1,2);
-var _b_ = Math.pow(x3-x2,2)+Math.pow(y2-y3,2);
-_cosA_value_ = (_b_+_c_-_a_)/(2*Math.sqrt(_b_)*Math.sqrt(_c_));
-return Math.acos(_cosA_value_);
+    var _c_ = Math.pow(x2-x1,2)+Math.pow(y2-y1,2);
+    var _a_ = Math.pow(x3-x1,2)+Math.pow(y3-y1,2);
+    var _b_ = Math.pow(x3-x2,2)+Math.pow(y2-y3,2);
+    _cosA_value_ = (_b_+_c_-_a_)/(2*Math.sqrt(_b_)*Math.sqrt(_c_));
+    return Math.acos(_cosA_value_);
 }
 
 
@@ -707,13 +707,13 @@ return Math.acos(_cosA_value_);
 **/
 function permutation(x1,x2)
 {
-var return_value__ = x1;
+    var return_value__ = x1;
     for(var _i_ = 1; _i_ < x2; _i_++)
     {
-    return_value__ *= x1-_i_;
+        return_value__ *= x1-_i_;
     }
 
-return return_value__;
+    return return_value__;
 }
 
 
@@ -729,9 +729,9 @@ function combination(x1,x2)
     //optimizing
     if (x1*0.5 < x2)
     {
-    x2 = x1-x2;
+        x2 = x1-x2;
     }
-return permutation(x1,2)/permutation(x2,2);
+    return permutation(x1,2)/permutation(x2,2);
 }
 
 
@@ -743,12 +743,12 @@ return permutation(x1,2)/permutation(x2,2);
 **/
 function factorial(n)
 {
-var return_value__ = n;
+    var return_value__ = n;
     for(var i = n-1; i > 1; i--)
     {
-    return_value__ *= i
+        return_value__ *= i
     }
-return return_value__;
+    return return_value__;
 }
 
 
@@ -761,7 +761,7 @@ return return_value__;
 **/
 function lengthdir_x(len,dir)
 {
-return len*Math.cos(dir)
+    return len*Math.cos(dir)
 }
 
 
@@ -772,7 +772,7 @@ return len*Math.cos(dir)
 **/
 function lengthdir_y(len,dir)
 {
-return len*Math.sin(dir)
+    return len*Math.sin(dir)
 }
 
 
@@ -788,11 +788,11 @@ return len*Math.sin(dir)
 **/
 function point_distance_3d(x1,y1,z1,x2,y2,z2)
 {
-//hypotenuse - 1
-var hypo_1 = point_distance(x1,y1,x2,y2);
+    //hypotenuse - 1
+    var hypo_1 = point_distance(x1,y1,x2,y2);
 
-//hypotenuse - 2
-return sqrt(power(hypo_1,2) + power(z1 - z2,2));
+    //hypotenuse - 2
+    return sqrt(power(hypo_1,2) + power(z1 - z2,2));
 }
 
 
@@ -808,14 +808,14 @@ function correct_deg(deg)
 {
     while(deg >= 0)
     {
-    deg += 360;
+        deg += 360;
     }
     
     while(deg < 360)
     {
-    deg -= 360;
+        deg -= 360;
     }
-return deg;
+    return deg;
 }
 
 
@@ -825,17 +825,17 @@ return deg;
 **/
 function correct_rad(rad)
 {
-var full_circle = Math.pi*2;
+    var full_circle = Math.pi*2;
     while(deg >= 0)
     {
-    deg += full_circle;
+        deg += full_circle;
     }
     
     while(deg < full_circle)
     {
-    deg -= full_circle;
+        deg -= full_circle;
     }
-return deg;
+    return deg;
 }
 
 
@@ -851,13 +851,13 @@ return deg;
 **/
 function average(val0, /*val1, val2, …, max_val*/)
 {
-var num_ = 0;
-var argument_length = arguments.length;
+    var num_ = 0;
+    var argument_length = arguments.length;
     for(var i = 0; i < argument_length; i++)
     {
-    num_ += arguments[i];
+        num_ += arguments[i];
     }
-return num_/argument_length;
+    return num_/argument_length;
 }
 
 
@@ -872,7 +872,7 @@ return num_/argument_length;
 **/
 function arithmetic_seq(firstTerm,lastTerm,n)
 {
-return n*(firstTerm+lastTerm)*0.5;
+    return n*(firstTerm+lastTerm)*0.5;
 }
 
 
@@ -885,7 +885,7 @@ return n*(firstTerm+lastTerm)*0.5;
 **/
 function geometric_seq(firstTerm,commonRatio,n)
 {
-return firstTerm*(Math.pow(commonRatio,sequence_length)-1)/(commonRatio-1);
+    return firstTerm*(Math.pow(commonRatio,sequence_length)-1)/(commonRatio-1);
 }
 
 
@@ -898,7 +898,7 @@ return firstTerm*(Math.pow(commonRatio,sequence_length)-1)/(commonRatio-1);
 **/
 function inf_geometric_seq(firstTerm,commonRatio)
 {
-return firstTerm/(1-commonRatio);
+    return firstTerm/(1-commonRatio);
 }
 
 
@@ -913,15 +913,15 @@ return firstTerm/(1-commonRatio);
 **/
 function highest_num(val0, /*val1, val2, …, max_val*/)
 {
-var highest_num = arguments[0]
+    var highest_num = arguments[0]
     for (var i = 1; i < arguments.length; i++) 
     { 
         if (highest_num < arguments[i])
         {
-        highest_num = arguments[i];
+            highest_num = arguments[i];
         }
     }
-return highest_num;
+    return highest_num;
 }
 
 
@@ -934,15 +934,15 @@ return highest_num;
 **/
 function highest_num_array(array)
 {
-var highest_num = array[0]
+    var highest_num = array[0]
     for (var i = 1; i < array.length; i++) 
     { 
         if (highest_num < array[i])
         {
-        highest_num = array[i];
+            highest_num = array[i];
         }
     }
-return highest_num;
+    return highest_num;
 }
 
 
@@ -959,15 +959,15 @@ function arrange_value(val0, /*val1, val2, …, max_val*/)
 {
     for (var i = 1; i < arguments.length; i++) 
     { 
-    var value = arguments[i]; 
+        var value = arguments[i]; 
 
         for (var j = i-1; j >= 0 && arguments[j] > value; j--) 
         {
-        arguments[j+1] = arguments[j];
+            arguments[j+1] = arguments[j];
         }
-    arguments[j+1] = value;
+        arguments[j+1] = value;
     }
-return arguments;
+    return arguments;
 }
 
 
@@ -980,15 +980,15 @@ function arrange_array(array)
 {
     for (var i = 1; i < array.length; i++) 
     { 
-    var value = array[i]; 
+        var value = array[i]; 
 
         for (var j = i-1; j >= 0 && array[j] > value; j--) 
         {
-        array[j+1] = array[j];
+            array[j+1] = array[j];
         }
-    array[j+1] = value;
+        array[j+1] = value;
     }
-return array;
+    return array;
 }
 
 
@@ -999,12 +999,12 @@ return array;
 **/
 function arrange_text(text_array)
 {
-var max_length = text_array[0].length;
+    var max_length = text_array[0].length;
     for(var i = 0; i < text_array.length; i++)
     {
         if (max_length < text_array[i])
         {
-        max_length = text_array[i];
+            max_length = text_array[i];
         }
     }
     
@@ -1012,17 +1012,17 @@ var max_length = text_array[0].length;
     {
         for (var i = 1; i < text_array.length; i++) 
         { 
-        var saved_value_real = text_array[i];
-        var value = saved_value_real.charCodeAt(k);
+            var saved_value_real = text_array[i];
+            var value = saved_value_real.charCodeAt(k);
 
             for (var j = i-1; j >= 0 && text_array[j].charCodeAt(k) > value; j--) 
             {
-            text_array[j+1] = text_array[j];
+                text_array[j+1] = text_array[j];
             }
-        text_array[j+1] = saved_value_real;
+            text_array[j+1] = saved_value_real;
         }
     }
-return text_array;
+    return text_array;
 }
 
 
@@ -1036,19 +1036,19 @@ return text_array;
 **/
 function randomize_array(array)
 {
-var temp_array = [];
-var array_length = array.length;
+    var temp_array = [];
+    var array_length = array.length;
     for(var i = array_length; i > 0; i--)
     {
-    var ramdom_selection = irandom_range(0,i);
-    temp_array[i] = array[ramdom_selection];
+        var ramdom_selection = irandom_range(0,i);
+        temp_array[i] = array[ramdom_selection];
         for(var ii = ramdom_selection; ii < array_length-1; ii++)
         {
-        array[ii] = array[ii+1];
+            array[ii] = array[ii+1];
         }
     }
     
-return temp_array;
+    return temp_array;
 }
 
 
@@ -1063,12 +1063,12 @@ return temp_array;
 **/
 function get_line_function(x1,y1,x2,y2)
 {
-var temp_array = [];
-var inclination = (y2-y1)/(x2-x1);
-temp_array[0] = inclination;
-temp_array[1] = y1-inclination*x1;
-temp_array[2] = "y="+inclination+"x+"+temp_array[1];
-return temp_array;
+    var temp_array = [];
+    var inclination = (y2-y1)/(x2-x1);
+    temp_array[0] = inclination;
+    temp_array[1] = y1-inclination*x1;
+    temp_array[2] = "y="+inclination+"x+"+temp_array[1];
+    return temp_array;
 }
 
 
@@ -1085,8 +1085,8 @@ return temp_array;
 **/
 function point_to_line_distance(x1,y1,x2,y2,x3,y3)
 {
-var inclination = (y2-y1)/(x2-x1);
-return Math.abs(inclination*(x3-x1)+y1-y3)/Math.sqrt(Math.pow(inclination,2)+1);
+    var inclination = (y2-y1)/(x2-x1);
+    return Math.abs(inclination*(x3-x1)+y1-y3)/Math.sqrt(Math.pow(inclination,2)+1);
 }
 
 
