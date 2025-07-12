@@ -1091,6 +1091,28 @@ function point_to_line_distance(x1,y1,x2,y2,x3,y3)
 
 
 
+/**
+ * Returns the velocity vector [vx, vy] for a given direction and speed.
+ * The direction should be in radians.
+ *
+ * @param {number} dir - The direction in radians (0 is right, PI/2 is up, etc.).
+ * @param {number} speed - The speed (magnitude of the velocity vector).
+ * @returns {Array<number>} An array [vx, vy] where vx and vy are the velocity components.
+ *
+ * Usage example:
+ *   var dir = Math.PI / 4; // 45 degrees in radians
+ *   var speed = 0.05;
+ *   var [vx, vy] = get_speed_by_direction(dir, speed);
+ */
+function get_speed_by_direction(dir, speed)
+{
+    var vx = Math.cos(dir) * speed;
+    var vy = Math.sin(dir) * speed;
+    return [vx, vy];
+}
+
+
+
 
 /**This function returns current region country
 @returns returns current region country
